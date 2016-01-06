@@ -2,23 +2,26 @@
 <html>
   <head>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="iconfonts/style.css">
+    <link rel="stylesheet" href="style/layout.css">
   </head>
   <body>
     <main>
-            <header>
+            <header class="title">
               <h1>
                 Noah Gribbin
               </h1>
-              <p>A jack of no trades!</p>
+              <h2>Placeholder Text!</h2>
             </header>
-            <nav>
-
-              <a href="http://twitter.com/noahgribbin" target="_blank">Twitter</a>
-              <a href="http://github.com/noahgribbin" target="_blank">Github</a>
-
+            <nav class="main-nav">
+              <li class="tab" data-content="articles"><a href="#"> <font class='icon-home3'></font> Home</a></li>
+              <li class="tab" data-content="about"><a href="#"> <font class='icon-user'></font> About</a></li>
+              <li class="tab"><a href="http://twitter.com/noahgribbin" target="_blank"><font class='icon-twitter'></font> Twitter</a></li>
+              <li class="tab"><a href="http://github.com/noahgribbin" target="_blank"><font class='icon-github'></font> Github</a></li>
             </nav>
-            <section id="articles">
+            <br>
+            <br>
+            <section id="articles" class="tab-content">
               <article class="template">
                 <header>
                   <h1>Title</h1>
@@ -30,11 +33,28 @@
                 <a href=""></a>
               </article>
             </section>
+            <section id="about" class="tab-content">
+              <header>
+        <h1>ABOUT NOAH</h1>
+      </header>
+      <section>
+        <p id="bio">
+          Noah Gribbin is the illegitimate love child of Bill Clinton and Monica Lewinsky.  Abandoned at birth he spends the majority of his time evading G-Men sent to erase his legacy from the history books of the future.  Unperturbed, he marches onward, honing his skills to build the hottest websites the world has ever seen.
+        </p>
+        <h3>Some of my intrests:</h3>
+        <ul>
+          <li>Coding</li>
+          <li>Cooking</li>
+          <li>Eating</li>
+        </ul>
+
+            </section>
           </div>
         </main>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="projects.js"></script>
-    <script src="index.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/articleView.js"></script>
   </body>
 </html>
