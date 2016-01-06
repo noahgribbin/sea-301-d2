@@ -48,9 +48,13 @@ ul {
     overflow: hidden;
     display: inline-block;
     list-style-type: none;
+
 }
 nav{
-
+    width: 100%;
+    background-color: purple;
+    padding-left: 25%;
+    padding-right: 25;
 }
 li {
     border-right: 1px solid #bbb;
