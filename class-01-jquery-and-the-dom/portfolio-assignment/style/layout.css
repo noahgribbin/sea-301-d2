@@ -12,16 +12,21 @@ header{
 /*text detail*/
 a{
   text-decoration: none;
-  color: #678CD4;
+  color: #FFE29D;
+  /*678CD4*/
 }
 a:visited{
   text-decoration: none;
-  color: #678CD4;
+  color: #FFE29D;
+}
+/*header*/
+.title{
+  text-align: center;
 }
 /*background colors*/
 }
-header{
-  background-color: #FFE89D;
+.title-wrapper{
+    background-color: #FFE89D;
 }
 /*allignment*/
 body{
@@ -39,22 +44,21 @@ section{
 
 }
 /*nav bar*/
-li{
+li.tab{
   float:left;
-
-
+  max-height: 100%;
 }
+
 ul {
     list-style-type: none;
-
-    height: auto;
     overflow: hidden;
-    display: inline-block;
+    /*display: inline-block;*/
+    float: left;
     list-style-type: none;
     width:100%;
-    /*padding-left: -40px;*/
-    /*padding-top: 14px*/
     -webkit-padding-start: 0px;
+    height: 100%;
+    margin: 0 auto;
 }
 .main-nav{
     width: 100%;
@@ -64,17 +68,20 @@ ul {
     display: inline-block;
 }
 .hamburger{
-  position: absolute;
+  /*position: absolute;*/
   display: inline-block;
   right: 20px;
   top: 20px;
   width:75px;
 }
-li {
+.hamburger-holder{
+  float: right;
+}
+li.tab {
     width: 25%;
     font-size: 20px;
 }
-li a {
+li.tab a {
 
     display: block;
     background-color: purple;
@@ -82,11 +89,15 @@ li a {
     /*padding-top: 14px;
     padding-bottom: 14px;*/
     text-decoration: none;
-    height:40px;
+    max-width: 100%;
+    max-height: 100%;
 
 }
-li a:hover {
+li.tab a:hover {
     background-color: #FFE29D;
+    color: purple;
+    max-width: 100%;
+    max-height: 100%;
 
 }
 /*media queries*/
@@ -99,6 +110,15 @@ li a:hover {
      display: none;
    }
  }
+ @media only screen and (min-width: 640px) {
+
+    .hamburger {
+      display: none;
+    }
+    .main-nav {
+      display: inline-block;
+    }
+  }
 /*display*/
 .template{
   display:none;
