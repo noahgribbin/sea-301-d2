@@ -26,6 +26,7 @@ header{
 /*allignment*/
 body{
   margin-left: auto;
+  margin-right: auto;
 }
 section{
   margin-left:1%;
@@ -40,34 +41,49 @@ section{
 /*nav bar*/
 li{
   float:left;
+
+
 }
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+    height: auto;
     overflow: hidden;
     display: inline-block;
     list-style-type: none;
-
+    width:100%;
+    /*padding-left: -40px;*/
+    /*padding-top: 14px*/
+    -webkit-padding-start: 0px;
 }
 nav{
     width: 100%;
+    height: 20%;
     background-color: purple;
-    padding-left: 25%;
-    padding-right: 25;
+    text-align: center;
+
+
 }
+
 li {
-    border-right: 1px solid #bbb;
+    width: 25%;
+    
+
 }
 li a {
+
     display: block;
     background-color: purple;
     text-align: center;
-    padding: 14px 16px;
+    /*padding-top: 14px;
+    padding-bottom: 14px;*/
     text-decoration: none;
+    height:40px;
+
 }
 li a:hover {
     background-color: #FFE29D;
+
 }
 /*display*/
 .template{
