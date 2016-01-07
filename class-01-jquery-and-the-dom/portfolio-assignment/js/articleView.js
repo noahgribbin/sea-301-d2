@@ -24,7 +24,12 @@ articleView.handleMainNav = function() {
      $('#about').css('display', 'none');
    }
   });
-
+  articleView.toggleNav = function(){
+     // console.log("Toggle");
+     $('.hamburger').on('click', function(){
+     $('nav').toggle();
+     })
+   };
 
   $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
 };
@@ -32,4 +37,5 @@ articleView.handleMainNav = function() {
 // TODO: Call all of the above functions, once we are sure the DOM is ready.
 $(document).ready(function() {
  articleView.handleMainNav();
+ articleView.toggleNav();
 });
