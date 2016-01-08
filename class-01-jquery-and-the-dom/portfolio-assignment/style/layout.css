@@ -1,58 +1,29 @@
-/*text color*/
-.byline{
-  color:grey;
-}
-/*text font*/
-.article-body{
-  font-family: helvetica;
-}
-header{
-  font-family: tahoma;
-}
-/*text detail*/
-a{
-  text-decoration: none;
-  color: #FFE29D;
-  /*678CD4*/
-}
-a:visited{
-  text-decoration: none;
-  color: #FFE29D;
-}
-/*header*/
-.title{
-  text-align: center;
-}
-/*background colors*/
-}
-.title-wrapper{
-    background-color: #FFE89D;
-}
 /*allignment*/
 body{
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 section{
-  margin-left:1%;
+  /*margin-left:1%;*/
 }
 #bio{
-  margin-right: 40%;
-  font-size: 17px;
+  /*font-size: 17px;*/
 }
-.title{
+#blog-area{
 
 }
 /*nav bar*/
 li.tab{
-  float:left;
-  max-height: 100%;
+  /*float:left;
+  max-height: 100%;*/
 }
 
 ul {
-    list-style-type: none;
+    display: block;
     overflow: hidden;
-    /*display: inline-block;*/
+    position: absolute;
     float: left;
     list-style-type: none;
     width:100%;
@@ -61,37 +32,40 @@ ul {
     margin: 0 auto;
 }
 .main-nav{
-    width: 100%;
+    max-width: 25%;
     height: 20%;
     background-color: purple;
-    text-align: center;
-    display: inline-block;
+    opacity: .8;
+    text-align: left;
+    display: none;
 }
-.hamburger{
-  /*position: absolute;*/
-  display: inline-block;
+#hamburger{
+  display: inline;
   right: 20px;
   top: 20px;
-  width:75px;
+  width:10%;
+  height:20%;
 }
 .hamburger-holder{
   float: right;
 }
 li.tab {
-    width: 25%;
+    display: block;
+    max-width: 25%;
     font-size: 20px;
+    position: relative;
+    text-align: left;
+
 }
 li.tab a {
 
     display: block;
     background-color: purple;
     text-align: center;
-    /*padding-top: 14px;
-    padding-bottom: 14px;*/
+    padding-top: 14px;
+    padding-bottom: 14px;
     text-decoration: none;
-    max-width: 100%;
-    max-height: 100%;
-
+    max-width: 25%%;
 }
 li.tab a:hover {
     background-color: #FFE29D;
@@ -100,25 +74,7 @@ li.tab a:hover {
     max-height: 100%;
 
 }
-/*media queries*/
-@media only screen and (max-width: 640px) {
 
-   .hamburger {
-     display: inline-block;
-   }
-   .main-nav {
-     display: none;
-   }
- }
- @media only screen and (min-width: 640px) {
-
-    .hamburger {
-      display: none;
-    }
-    .main-nav {
-      display: inline-block;
-    }
-  }
 /*display*/
 .template{
   display:none;

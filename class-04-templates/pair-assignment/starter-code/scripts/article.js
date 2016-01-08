@@ -32,7 +32,7 @@ Article.prototype.toHtml = function() {
     // $('#blog-area').append(html);
   return html;
 };
-
+  
 rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });

@@ -5,49 +5,58 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="iconfonts/style.css">
     <link rel="stylesheet" href="style/layout.css">
-
+    <link rel="stylesheet" href="style/modules.css">
+    <link rel="stylesheet" href="style/base.css">
+    <script id="blog-entries" type="text/x-handlebars-template">
+        <article class="" data-category="{{category}}">
+          <header>
+            <h1>{{title}}</h1>
+            <div class="byline">
+            published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
+            </div>
+          </header>
+          <section class="article-body">{{{body}}}</section>
+          <a href="#" class="read-on">Read on &rarr;</a>
+        </article>
+    </script>
   </head>
+
   <body>
     <main>
-            <header>
-              <div class="hamburger-holder">
-              <img src="img/hamburger.png" class="hamburger"></img>
-              </div>
-              <br>
-              <br>
-              <div class="title-wrapper">
-
-              <h1 class="title">
-                Noah Gribbin
-              </h1>
-              <h2 class="title">Placeholder Text!</h2>
+      <header>
+        <div class="hamburger-holder">
+          <font id="hamburger" class='icon-home3'></font>
+        </div>
+        <div class="title-wrapper">
+          <p class="title">Noah Gribbin</p>
+          <p class="title">Placeholder Text!</p>
+        </div>
+      </header>
+      <nav class="main-nav">
+        <ul>
+        <li class="tab" data-content="articles"><a class="nav-link" href="#"> <font class='icon-home3'></font> Home</a></li>
+        <li class="tab" data-content="about"><a class="nav-link" href="#"> <font class='icon-user'></font> About</a></li>
+        <li class="tab"><a class="nav-link" href="http://twitter.com/noahgribbin" target="_blank"><font class='icon-twitter'></font> Twitter</a></li>
+        <li class="tab"><a class="nav-link" href="http://github.com/noahgribbin" target="_blank"><font class='icon-github'></font> Github</a></li>
+        </ul>
+      </nav>
+      <br>
+      <br>
+      <section id="articles" class="tab-content">
+        <article class="template">
+          <header>
+            <h1>Title</h1>
+            <div class="byline">
+              published <time pubdate datetime="2000-01-01">Publish Time</time>
             </div>
-
-            </header>
-            <nav class="main-nav">
-              <ul>
-              <li class="tab" data-content="articles"><a class="nav-link" href="#"> <font class='icon-home3'></font> Home</a></li>
-              <li class="tab" data-content="about"><a class="nav-link" href="#"> <font class='icon-user'></font> About</a></li>
-              <li class="tab"><a class="nav-link" href="http://twitter.com/noahgribbin" target="_blank"><font class='icon-twitter'></font> Twitter</a></li>
-              <li class="tab"><a class="nav-link" href="http://github.com/noahgribbin" target="_blank"><font class='icon-github'></font> Github</a></li>
-            </ul>
-            </nav>
-            <br>
-            <br>
-            <section id="articles" class="tab-content">
-              <article class="template">
-                <header>
-                  <h1>Title</h1>
-                  <div class="byline">
-                    published <time pubdate datetime="2000-01-01">Publish Time</time>
-                  </div>
-                </header>
-                <section class="article-body"></section>
-                <a href=""></a>
-              </article>
-            </section>
-            <section id="about" class="tab-content">
-              <header>
+          </header>
+          <section class="article-body"></section>
+          <a href=""></a>
+        </article>
+      </section>
+      <div id="blog-area"></div>
+      <section id="about" class="tab-content">
+      <header>
         <h1>ABOUT NOAH</h1>
       </header>
       <section>
@@ -60,11 +69,9 @@
           <li>Cooking</li>
           <li>Eating</li>
         </ul>
-
-            </section>
-          </div>
-        </main>
-
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/index.js"></script>

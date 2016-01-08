@@ -17,16 +17,16 @@ articleView.handleMainNav = function() {
    var content = $(this).attr('data-content');
 
    if (content == 'about') {
-     $('article.populated').css('display', 'none');
+     $('#blog-area').css('display', 'none');
      $('#about').fadeIn(300);
    } else if (content == 'articles') {
-     $('article.populated').fadeIn(300);
+     $('#blog-area').fadeIn(300);
      $('#about').css('display', 'none');
    }
   });
   articleView.toggleNav = function(){
      // console.log("Toggle");
-     $('.hamburger').on('click', function(){
+     $('#hamburger').on('click', function(){
      $('nav').toggle();
      })
    };

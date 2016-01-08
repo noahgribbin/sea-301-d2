@@ -1,0 +1,38 @@
+/*text color*/
+.byline{
+  color:grey;
+}
+/*text font*/
+.article-body{
+  font-family: helvetica;
+}
+header{
+  font-family: tahoma;
+}
+/*text detail*/
+a{
+  text-decoration: none;
+  color: #FFE29D;
+  height: 50%;
+  /*678CD4*/
+}
+a:visited{
+  text-decoration: none;
+  color: #FFE29D;
+}
+/*header*/
+.title{
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.title-wrapper{
+  background-color: grey;
+  height:10%;
+}
+/*background colors*/
+}
+.title-wrapper{
+    background-color: #FFE89D;
+    display: inline;
+}

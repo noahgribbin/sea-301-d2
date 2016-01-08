@@ -9,25 +9,12 @@ this.body = opts.body;
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
+  var appTemplate = $("#blog-entries").html();
+  var compileTemplate = Handlebars.compile(appTemplate);
+  var dataSource = this;
+  var html = compileTemplate(dataSource);
 
-$newProject.data('title', this.title);
-$newProject.data('publishedOn', this.publishedOn);
-$newProject.data('body', this.body);
-
-
-$newProject
-$newProject.find('h1').html(this.title);
-$newProject.find('time[pubdate]').attr('title', this.publishedOn);
-$newProject.find('time').html(this.publishedOn);
-$newProject.find('section.article-body').html(this.body);
-
-$newProject.append('<hr>');
-
-$newProject.removeClass('template');
-$newProject.addClass('populated');
-
-return $newProject;
+  return html;
 }
 
 rawData.sort(function(a,b) {
@@ -39,5 +26,5 @@ rawData.forEach(function(ele) {
 });
 
 projects.forEach(function(a){
-  $('#articles').append(a.toHtml())
+  $('#blog-area').append(a.toHtml())
 });
