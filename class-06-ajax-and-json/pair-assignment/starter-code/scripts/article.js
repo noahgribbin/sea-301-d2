@@ -43,7 +43,16 @@ Article.loadAll = function(rawData) {
 // This function will retrieve the data from either a local or remote source,
 // and process it, then hand off control to the View.
 Article.fetchAll = function() {
-  if (localStorage.rawData) {
+  var etag = ''
+  $.ajax('/data/hackerIpsum.json',{
+    method:'HEAD',
+    success:function(data, textsStatus, xhr){
+      console.log(xhr.getResponseHeader('eTag'));
+      // localStorage.etag = xhr.getResponseHeader('eTag');
+      etag = xhr.getResponseHeader('eTag');
+    }
+  });
+  if (localStorage.etag == etag) {
     Article.loadAll(JSON.parse(localStorage.rawData));
     articleView.initIndexPage();
 
@@ -62,7 +71,9 @@ Article.fetchAll = function() {
     $.getJSON('/data/hackerIpsum.json',function(rawData){
       Article.loadAll(rawData);
       localStorage.rawData = JSON.stringify(rawData);
-      ArticleView.initIndexPage();
+      localStorage.etag = etag;
+      articleView.initIndexPage();
+
     });
   }
 }
