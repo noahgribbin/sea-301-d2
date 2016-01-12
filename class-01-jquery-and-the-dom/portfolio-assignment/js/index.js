@@ -5,9 +5,8 @@ this.title = opts.title;
 this.publishedOn = opts.publishedOn;
 this.photo = opts.photo;
 this.body = opts.body;
-
 }
-
+Project.all = [];
 Project.prototype.toHtml = function() {
   var appTemplate = $("#blog-entries").html();
   var compileTemplate = Handlebars.compile(appTemplate);
@@ -16,15 +15,41 @@ Project.prototype.toHtml = function() {
 
   return html;
 }
-
-rawData.sort(function(a,b) {
+Project.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+  });
 
-rawData.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+  rawData.forEach(function(ele) {
+  Project.all.push(new Project(ele));
+    });
+}
 
-projects.forEach(function(a){
-  $('#blog-area').append(a.toHtml())
-});
+Project.fetchAll = function() {
+  var etag = ''
+  $.ajax('projectList.json',{
+    method:'HEAD',
+    success:function(data, textsStatus, xhr){
+      console.log(xhr.getResponseHeader('eTag'));
+      // localStorage.etag = xhr.getResponseHeader('eTag');
+      etag = xhr.getResponseHeader('eTag');
+    }
+  });
+  if (localStorage.etag == etag) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    articleView.initIndexPage();
+
+  } else {
+
+    $.getJSON('projectList.json',function(rawData){
+      Project.loadAll(rawData);
+      localStorage.rawData = JSON.stringify(rawData);
+      localStorage.etag = etag;
+      articleView.initIndexPage();
+
+    });
+  }
+}
+// projects.forEach(function(a){
+//   $('#blog-area').append(a.toHtml())
+// });

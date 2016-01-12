@@ -28,11 +28,11 @@ ul {
     list-style-type: none;
     width:100%;
     -webkit-padding-start: 0px;
-    height: 100%;
+    /*height: 100%;*/
     margin: 0 auto;
 }
 .main-nav{
-    max-width: 25%;
+    max-width: 100%;
     height: 20%;
     background-color: purple;
     opacity: .8;
@@ -51,7 +51,7 @@ ul {
 }
 li.tab {
     display: block;
-    max-width: 25%;
+    max-width: 100 %;
     font-size: 20px;
     position: relative;
     text-align: left;
@@ -65,7 +65,7 @@ li.tab a {
     padding-top: 14px;
     padding-bottom: 14px;
     text-decoration: none;
-    max-width: 25%%;
+    max-width: 100%;
 }
 li.tab a:hover {
     background-color: #FFE29D;

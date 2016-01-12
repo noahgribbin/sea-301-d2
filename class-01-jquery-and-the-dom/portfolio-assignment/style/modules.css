@@ -15,19 +15,23 @@
     }
     .main-nav {
       display: inline-block;
-      width: 100%
+      width: 100%;
+      height:auto;
     }
     li.tab{
       float: left;
       display: inline;
+      max-width: 100%;
+      width: 25%;
     }
     li.tab a {
       display: block;
-      text-align: center;
+      text-align:center;
+      width:100%;
+
     }
     ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    width: 100%;
     overflow: hidden;
   }

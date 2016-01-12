@@ -15,8 +15,9 @@
             published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
             </div>
           </header>
+          <img src={{image}} class="img-preview"></img>
+
           <section class="article-body">{{{body}}}</section>
-          <a href="#" class="read-on">Read on &rarr;</a>
         </article>
     </script>
   </head>
@@ -30,16 +31,18 @@
         <div class="title-wrapper">
           <p class="title">Noah Gribbin</p>
           <p class="title">Placeholder Text!</p>
+          <nav class="main-nav">
+          <li class="tab" data-content="articles"><a class="nav-link" href="#"> <font class='icon-home3'></font> Home</a></li>
+          <li class="tab" data-content="about"><a class="nav-link" href="#"> <font class='icon-user'></font> About</a></li>
+          <li class="tab"><a class="nav-link" href="http://twitter.com/noahgribbin" target="_blank"><font class='icon-twitter'></font> Twitter</a></li>
+          <li class="tab"><a class="nav-link" href="http://github.com/noahgribbin" target="_blank"><font class='icon-github'></font> Github</a></li>
+          </ul>
+        </nav>
         </div>
       </header>
-      <nav class="main-nav">
+
         <ul>
-        <li class="tab" data-content="articles"><a class="nav-link" href="#"> <font class='icon-home3'></font> Home</a></li>
-        <li class="tab" data-content="about"><a class="nav-link" href="#"> <font class='icon-user'></font> About</a></li>
-        <li class="tab"><a class="nav-link" href="http://twitter.com/noahgribbin" target="_blank"><font class='icon-twitter'></font> Twitter</a></li>
-        <li class="tab"><a class="nav-link" href="http://github.com/noahgribbin" target="_blank"><font class='icon-github'></font> Github</a></li>
-        </ul>
-      </nav>
+
       <br>
       <br>
       <section id="articles" class="tab-content">
@@ -76,5 +79,6 @@
     <script src="js/projects.js"></script>
     <script src="js/index.js"></script>
     <script src="js/articleView.js"></script>
+    <script> Project.fetchAll(); </script>
   </body>
 </html>
