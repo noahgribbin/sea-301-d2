@@ -16,7 +16,6 @@
           <h1>{{title}}</h1>
           <div class="byline">
             By <address><a href="{{authorUrl}}">{{author}}</a></address>
-            {{publishStatus}}
           </div>
         </header>
         <section class="article-body">{{{body}}}</section>
@@ -85,7 +84,6 @@
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
     <script>
-      // DONE: Ensure that a database table for articles exists, every time we load the page.
       Article.createTable();
       Article.fetchAll(articleView.initIndexPage);
     </script>
