@@ -3,8 +3,9 @@ var projects = [];
 function Project (opts) {
 this.title = opts.title;
 this.publishedOn = opts.publishedOn;
-this.photo = opts.photo;
 this.body = opts.body;
+this.image = opts.image;
+this.imageUrl = opts.imageUrl;
 }
 Project.all = [];
 Project.prototype.toHtml = function() {
@@ -50,6 +51,3 @@ Project.fetchAll = function() {
     });
   }
 }
-// projects.forEach(function(a){
-//   $('#blog-area').append(a.toHtml())
-// });

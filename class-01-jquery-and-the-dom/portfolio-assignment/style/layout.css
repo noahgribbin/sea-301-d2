@@ -4,15 +4,49 @@ body{
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
+  background-color: black;
 }
 section{
   /*margin-left:1%;*/
 }
+
 #bio{
   /*font-size: 17px;*/
 }
-#blog-area{
-
+/*project layout*/
+.tab-content{
+  background-color: grey;
+}
+.project{
+  margin: auto;
+}
+.project-header{
+  margin: auto;
+  text-align: center;
+}
+#head-holder{
+  padding-top: 2%;
+  padding-bottom: 25;
+}
+.project-title{
+  margin-top: 0;
+  padding-top: 3%;
+}
+.article-body{
+  text-align: center;
+  margin: auto;
+  max-width: 60%;
+}
+/*image layout*/
+.img-preview{
+  max-width: 20%
+}
+.image-wrapper{
+  text-align: center;
+}
+/*about layou*/
+.about-title{
+  margin-top: 0;
 }
 /*nav bar*/
 li.tab{
@@ -33,11 +67,11 @@ ul {
 }
 .main-nav{
     max-width: 100%;
-    height: 20%;
-    background-color: purple;
+    background-color: #FF9120;
     opacity: .8;
     text-align: left;
     display: none;
+    /*position: absolute;*/
 }
 #hamburger{
   display: inline;
@@ -60,7 +94,7 @@ li.tab {
 li.tab a {
 
     display: block;
-    background-color: purple;
+    background-color: #FF9120;
     text-align: center;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -69,7 +103,7 @@ li.tab a {
 }
 li.tab a:hover {
     background-color: #FFE29D;
-    color: purple;
+    color: #FF9120;
     max-width: 100%;
     max-height: 100%;
 
