@@ -13,13 +13,13 @@ header{
 /*text detail*/
 a{
   text-decoration: none;
-  color: #FFE29D;
+  color: #faa700;
   height: 50%;
   /*678CD4*/
 }
 a:visited{
   text-decoration: none;
-  color: #FFE29D;
+  color: #faa700;
 }
 /*header*/
 .title1{
@@ -39,14 +39,15 @@ a:visited{
   text-align: center;
 }
 .title-wrapper{
-  background-color: #1D1915;
+  background-color: #333333;
   height:30%;
   padding-top: 2%;
-  padding-bottom: 
+  max-width: 100%;
 }
 /*background colors*/
 }
 .title-wrapper{
-    background-color: #F88927;
+    background-color: #faa700;
     display: inline;
+
 }
