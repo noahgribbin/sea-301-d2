@@ -2,11 +2,9 @@
   var aboutController = {};
 
   aboutController.index = function() {
-    // $('.main-nav').on('click', '.tab', function(e) {
-      $('#articles').hide();
-      $('#about').fadeIn();
-    // });
-    // $('.main-nav .tab:first').click();
+    $('#articles').hide();
+    $('#about').fadeIn();
+    repos.requestRepos(repoView.index);
   };
 
   module.aboutController = aboutController;
